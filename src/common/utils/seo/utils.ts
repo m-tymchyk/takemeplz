@@ -1,4 +1,4 @@
-export const SEO_HOST = 'https://plark.io';
+export const SEO_HOST = 'https://takemeplz.com';
 
 export type PageSeoConfig = {
     title: string;

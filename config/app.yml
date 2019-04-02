@@ -1,6 +1,6 @@
 app:
-  host: plark.io
+  host: takemeplz.com
   port: 80
   secure: true
 
-  gtmKey: 'GTM-K8BVBNG'
+  gtmKey: 'GTM-111111'

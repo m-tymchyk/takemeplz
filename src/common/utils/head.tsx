@@ -7,8 +7,8 @@ import { RouteHeadRenderFn } from './router/router';
 import { OpenGraph, PageSeoConfig, getStructuredData, Breadcrumbs, getHrefLangUrls } from './seo';
 
 const defaultSeoConfig: PageSeoConfig = {
-    title: 'Plark - safest multi asset wallet',
-    description: 'Pay like Spark!',
+    title: 'Takemeplz',
+    description: 'О да!',
 };
 
 const Head = ({ i18n, children: render, getSeoConfig }: HeadProps) => {
@@ -25,7 +25,6 @@ const Head = ({ i18n, children: render, getSeoConfig }: HeadProps) => {
 
             if (isFragment(child)) {
                 children.push(...child.props.children);
-
                 return;
             }
 

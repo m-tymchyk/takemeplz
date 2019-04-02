@@ -9,15 +9,15 @@ export default (props: OpenGraphProps): React.ReactNode => {
     const data = {
         '@context': 'http://schema.org',
         '@type': 'Organization',
-        name: 'Plark',
+        name: 'Takemeplz',
         description: description,
         image: `${SEO_HOST}/img/${i18n.language}/open-graph.png`,
         logo: `${SEO_HOST}/img/logo.png`,
         url: SEO_HOST,
         sameAs: [
-            'https://www.facebook.com/plark',
+            'https://www.facebook.com/takemeplz',
         ],
-        email: 'support@plark.io',
+        email: 'support@takemeplz.com',
     };
 
     return <script type="application/ld+json">{JSON.stringify(data)}</script>;

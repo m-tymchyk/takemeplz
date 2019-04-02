@@ -1,11 +1,10 @@
 {
-    "name": "plark-website",
+    "name": "takemeplz",
     "version": "1.0.0",
     "main": "index.js",
-    "author": "Plark Team <info@plark.io>",
+    "author": "Plark Team <info@takemeplz.com>",
     "contributors": [
-        "Maksym Tymchyk <m.tymchyk@p1k.co.uk>",
-        "Yehor Melnykov <y.melnykov@p1k.co.uk>"
+        "Maksym Tymchyk <m.tymchyk@p1k.co.uk>"
     ],
     "license": "WTFPL",
     "private": true,

@@ -1,6 +1,0 @@
-{
-    "private": true,
-    "name": "intro",
-    "main": "intro.tsx",
-    "typings": "intro.tsx"
-}

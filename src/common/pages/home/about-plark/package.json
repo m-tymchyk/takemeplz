@@ -1,6 +1,0 @@
-{
-    "private": true,
-    "name": "about-plark",
-    "main": "about-plark.tsx",
-    "typings": "about-plark.tsx"
-}

@@ -11,14 +11,14 @@ class OpenGraph extends React.PureComponent<OpenGraphProps> {
 
         return (
             <Helmet>
-                <meta name="twitter:site" content="@Plark" />
-                <meta name="twitter:creator" content="@Plark" />
+                <meta name="twitter:site" content="@takemeplz" />
+                <meta name="twitter:creator" content="@takemeplz" />
                 <meta name="twitter:card" content="summary_large_image" />
 
                 <meta property="og:url" content={`${SEO_HOST}${location.pathname}`} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:site_name" content="Plark" />
+                <meta property="og:site_name" content="Take me Plz" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content={`${SEO_HOST}/img/${i18n.language}/open-graph.png`} />
                 <meta property="og:image:width" content="1200" />
