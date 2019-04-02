@@ -55,7 +55,7 @@ ENV NODE_ENV=production \
     GTM_KEY="GTM-111111" \
     LOG_PATH="/var/log/docker/takemeplz-website"
 
-WORKDIR /usr/src/plark-website
+WORKDIR /usr/src/takemeplz-website
 
 COPY --from=NODE_MODULES /usr/src/takemeplz-website/node_modules node_modules/
 COPY resources resources/
