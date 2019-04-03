@@ -12,7 +12,7 @@ export const routes: RouteDescriptor[] = [
         getSeoConfig: (i18n: ITranslationsAdapter): PageSeoConfig => ({
             title: i18n.gettext('Возьми меня с собой, пожалуйста!'),
             description: i18n.gettext('Возьми меня с собой, пожалуйста!'),
-            canonicalLink: 'https://takemeplz.com',
+            canonicalLink: 'https://takemetrip.com',
             path: '/',
         }),
         getSitemapOption: (): SitemapOption => ({

@@ -1,5 +1,5 @@
 app:
-  host: takemeplz.com
+  host: takemetrip.com
   port: 80
   secure: true
 

@@ -2,7 +2,7 @@ import { LocationDescriptor } from 'history';
 import { isAnyLocalePath } from './router/router';
 import { DEFAULT_LOCALE } from './locale';
 
-let baseHost = 'takemeplz.com';
+let baseHost = 'takemetrip.com';
 if (__isBrowser__) {
     baseHost = window.location.host;
 }

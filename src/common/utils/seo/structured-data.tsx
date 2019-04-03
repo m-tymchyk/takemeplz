@@ -17,7 +17,7 @@ export default (props: OpenGraphProps): React.ReactNode => {
         sameAs: [
             'https://www.facebook.com/takemeplz',
         ],
-        email: 'support@takemeplz.com',
+        email: 'support@takemetrip.com',
     };
 
     return <script type="application/ld+json">{JSON.stringify(data)}</script>;

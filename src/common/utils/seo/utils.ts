@@ -1,4 +1,4 @@
-export const SEO_HOST = 'https://takemeplz.com';
+export const SEO_HOST = 'https://takemetrip.com';
 
 export type PageSeoConfig = {
     title: string;
