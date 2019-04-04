@@ -48,7 +48,7 @@ export type MatchProps = {
 
 const allLocalesList = Object.keys(locales);
 const secondaryLocalesList = Object.keys(getSecondaryLocales());
-export const localePathRule = secondaryLocalesList.length > 0 ? `/:locale(${secondaryLocalesList.join('|')})?` : '/';
+export const localePathRule = secondaryLocalesList.length > 0 ? `/:locale(${secondaryLocalesList.join('|')})?` : '';
 export const allLocalesRegExp = new RegExp(`^/(${allLocalesList.join('|')})`);
 export const defaultLocaleRegExp = new RegExp(`^/(${DEFAULT_LOCALE})`);
 

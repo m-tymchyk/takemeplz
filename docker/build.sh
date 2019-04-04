@@ -8,5 +8,5 @@ yarn locales:import
 
 docker build \
     --file ./Dockerfile \
-    --tag takemeplz/website:$APPLICATION_VERSION \
-    --tag takemeplz/website .
+    --tag takemetrip/website:$APPLICATION_VERSION \
+    --tag takemetrip/website .

@@ -15,7 +15,7 @@ export default (props: OpenGraphProps): React.ReactNode => {
         logo: `${SEO_HOST}/img/logo.png`,
         url: SEO_HOST,
         sameAs: [
-            'https://www.facebook.com/takemeplz',
+            'https://www.facebook.com/takemetrip',
         ],
         email: 'support@takemetrip.com',
     };

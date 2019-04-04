@@ -11,8 +11,8 @@ class OpenGraph extends React.PureComponent<OpenGraphProps> {
 
         return (
             <Helmet>
-                <meta name="twitter:site" content="@takemeplz" />
-                <meta name="twitter:creator" content="@takemeplz" />
+                <meta name="twitter:site" content="@takemetrip" />
+                <meta name="twitter:creator" content="@takemetrip" />
                 <meta name="twitter:card" content="summary_large_image" />
 
                 <meta property="og:url" content={`${SEO_HOST}${location.pathname}`} />

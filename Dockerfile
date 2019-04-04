@@ -3,7 +3,7 @@
 # =======================
 FROM node:10.14.0-alpine AS NODE_MODULES
 
-WORKDIR /usr/src/takemeplz-website
+WORKDIR /usr/src/takemetrip-website
 COPY package.json yarn.lock ./
 
 RUN yarn install && \
@@ -21,8 +21,8 @@ FROM node:10.14.0-alpine AS LOCALES
 ARG LOCO_READ_KEY
 ARG LOCO_WRITE_KEY
 
-WORKDIR /usr/src/takemeplz-website
-COPY --from=NODE_MODULES /usr/src/takemeplz-website/node_modules node_modules/
+WORKDIR /usr/src/takemetrip-website
+COPY --from=NODE_MODULES /usr/src/takemetrip-website/node_modules node_modules/
 COPY package.json gulpfile.js pot-extractor.js ./
 COPY config/locales.json config/locales.json
 
@@ -53,13 +53,13 @@ ENV NODE_ENV=production \
     PORT=80 \
     SECURE=true \
     GTM_KEY="GTM-111111" \
-    LOG_PATH="/var/log/docker/takemeplz-website"
+    LOG_PATH="/var/log/docker/takemetrip-website"
 
-WORKDIR /usr/src/takemeplz-website
+WORKDIR /usr/src/takemetrip-website
 
-COPY --from=NODE_MODULES /usr/src/takemeplz-website/node_modules node_modules/
+COPY --from=NODE_MODULES /usr/src/takemetrip-website/node_modules node_modules/
 COPY resources resources/
-COPY --from=LOCALES /usr/src/takemeplz-website/resources/locales resources/locales/
+COPY --from=LOCALES /usr/src/takemetrip-website/resources/locales resources/locales/
 COPY docker docker/
 COPY webpack webpack/
 COPY config config/
@@ -81,9 +81,9 @@ RUN apk update && \
     tsconfig.json \
     webpack.*.js
 
-RUN envsubst < /usr/src/takemeplz-website/docker/.env.template.yml > /usr/src/takemeplz-website/.env.yml
+RUN envsubst < /usr/src/takemetrip-website/docker/.env.template.yml > /usr/src/takemetrip-website/.env.yml
 
 EXPOSE 80
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
-CMD ["/bin/sh", "-c", "envsubst < /usr/src/takemeplz-website/docker/.env.template.yml > /usr/src/takemeplz-website/.env.yml && yarn start"]
+CMD ["/bin/sh", "-c", "envsubst < /usr/src/takemetrip-website/docker/.env.template.yml > /usr/src/takemetrip-website/.env.yml && yarn start"]

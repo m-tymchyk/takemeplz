@@ -7,8 +7,8 @@ export type Locale = {
 
 export type Locales = Record<string, Locale>;
 
-export const DEFAULT_LOCALE = 'en-us';
-export const DEFAULT_LOCALE_SHORT_CODE = 'en';
+export const DEFAULT_LOCALE = 'ru-ru';
+export const DEFAULT_LOCALE_SHORT_CODE = 'ru';
 
 export const locales: Locales = require('config/locales.json');
 

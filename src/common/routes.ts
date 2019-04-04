@@ -10,8 +10,8 @@ export const routes: RouteDescriptor[] = [
         path: makeRoutePath('/'),
         load: makeRouteLoadFunction('home'),
         getSeoConfig: (i18n: ITranslationsAdapter): PageSeoConfig => ({
-            title: i18n.gettext('Возьми меня с собой, пожалуйста!'),
-            description: i18n.gettext('Возьми меня с собой, пожалуйста!'),
+            title: i18n.gettext('Возьми меня с собой пожалуйста! - Take Me Trip'),
+            description: i18n.gettext('Возьми меня с собой пожалуйста! - Take Me Trip'),
             canonicalLink: 'https://takemetrip.com',
             path: '/',
         }),

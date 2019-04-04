@@ -4,7 +4,7 @@ import { TransformableInfo } from 'logform';
 
 const mkdirp = require('mkdirp-sync');
 
-const logDir = process.env.LOG_PATH || '/var/log/docker/takemeplz-website';
+const logDir = process.env.LOG_PATH || '/var/log/docker/takemetrip-website';
 if (!fs.existsSync(logDir)) {
     mkdirp(logDir);
 }

@@ -3,14 +3,14 @@ import { ITranslationsAdapter } from 'slim-i18n';
 import { locales, getLocale } from 'common/utils/locale';
 
 i18next.init({
-    lng: 'en-us',
+    lng: 'ru-ru',
     lowerCaseLng: true,
     keySeparator: false,
     nsSeparator: false,
     defaultNS: 'translation',
     resources: {
-        'en-us': {
-            translation: require(`resources/locales/en-us.json`),
+        'ru-ru': {
+            translation: require(`resources/locales/ru-ru.json`),
         },
     },
 });
