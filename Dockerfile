@@ -49,11 +49,11 @@ RUN apk update && apk add --no-cache gettext && \
 FROM node:10.14.0-alpine as WEBSITE_APP
 
 ENV NODE_ENV=production \
+    WEBSITE_HOST=localhost \
+    WEBSITE_PORT=80 \
     API_HOST=localhost \
     API_PORT=80 \
     API_INNER_HOST=localhost \
-    HOST=localhost \
-    PORT=80 \
     SECURE=true \
     GTM_KEY="GTM-111111" \
     LOG_PATH="/var/log/docker/takemetrip-website" \
@@ -102,11 +102,11 @@ CMD ["/bin/sh", "-c", "envsubst < /usr/src/takemetrip/docker/.env.template.yml >
 FROM node:10.14.0-alpine as API_APP
 
 ENV NODE_ENV=production \
+    WEBSITE_HOST=localhost \
+    WEBSITE_PORT=80 \
     API_HOST=localhost \
     API_PORT=80 \
     API_INNER_HOST=localhost \
-    HOST=localhost \
-    PORT=80 \
     SECURE=true \
     LOG_PATH="/var/log/docker/takemetrip-website" \
     API_LOG_PATH="/var/log/docker/takemetrip-api"
@@ -142,4 +142,4 @@ RUN envsubst < /usr/src/takemetrip/docker/.env.template.yml > /usr/src/takemetri
 EXPOSE 80
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
-CMD ["/bin/sh", "-c", "envsubst < /usr/src/takemetrip/docker/.env.template.yml > /usr/src/takemetrip/.env.yml && yarn api-start"]
+CMD ["/bin/sh", "-c", "envsubst < /usr/src/takemetrip/docker/.env.template.yml > /usr/src/takemetrip/.env.yml && yarn start:api"]
