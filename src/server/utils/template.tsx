@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import Helmet from 'react-helmet';
-
-import { config } from 'server/config';
+import config from 'backend-utils/config';
 import { getChunkAssetFilePath, getCSSChunksMap, cssRe } from './assets-utils';
 import GtmManager from './gtm';
 import Favicon from './favicon';

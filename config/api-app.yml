@@ -1,0 +1,5 @@
+apiApp:
+  innerHost: localhost
+  host: api.takemetrip.com
+  port: 80
+  secure: true

@@ -10,13 +10,13 @@
     "private": true,
     "scripts": {
         "start": "node ./dest/server/server.js",
+        "api-start": "node ./dest/api/api-server.js",
         "dev-server": "webpack-cli --progress && npm start",
         "build": "NODE_ENV=production webpack-cli --progress",
         "copy": "gulp copy",
         "tslint": "tslint -c tslint.json -p tsconfig.json",
         "eslint": "eslint .",
         "stylelint": "stylelint \"src/**/*.scss\"",
-        "prettier": "prettier --write *.js **/*.js **/*.ts **/*.tsx",
         "precommit": "lint-staged",
         "locales:export": "gulp pot && gulp locales:export",
         "locales:import": "gulp locales:import"

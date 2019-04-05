@@ -71,13 +71,11 @@ async function loadDependencies(context: ServerRenderingContext): Promise<void> 
     });
 }
 
-
-async function fetchComponentProps(component: any) {
+async function fetchComponentProps(component: any): Promise<any> {
     if (component && component.hasOwnProperty('getInitialProps')) {
         return await component.getInitialProps({ isBrowser: false, req: {} });
     }
 }
-
 
 async function compressCss(css: string): Promise<string> {
     return new Promise((res: (str: string) => void, rej: (err: Error) => void) => {

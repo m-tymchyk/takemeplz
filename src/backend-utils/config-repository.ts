@@ -2,11 +2,10 @@ import fs from 'fs';
 import get from 'lodash/get';
 import yaml, { DocumentLoadResult } from 'js-yaml';
 import deepAssign from 'deep-assign';
-import logger from 'server/utils/logger';
 
 export type ConfigValue = object | string | number | null | undefined;
 
-export class ConfigRepository {
+export default class ConfigRepository {
     private config: Record<string, ConfigValue> = {};
 
     public get<T = ConfigValue>(key: string | string[], defaultValue: T | undefined = undefined): T {
@@ -30,9 +29,9 @@ export class ConfigRepository {
             const configValue = yaml.safeLoad(fs.readFileSync(filePath, 'utf8'));
             this.merge(configValue);
         } catch (error) {
-            logger.error({
+            console.warn({
                 msg: 'Load config file error',
-                filePath,
+                filePath: filePath,
                 error: error.toString(),
             });
         }
